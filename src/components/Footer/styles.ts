@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { colors } from '../../styles'
 
 export const Container = styled.footer`
-  background-color: ${colors.beige};
+  background-color: ${colors.black};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,6 +18,14 @@ export const Container = styled.footer`
     width: 480px;
     font-size: 10px;
     text-align: center;
+  }
+
+  h1 {
+    color: ${colors.white};
+
+    span {
+      color: ${colors.green};
+    }
   }
 `
 

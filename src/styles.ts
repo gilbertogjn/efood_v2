@@ -5,12 +5,20 @@ export const colors = {
   red: '#E66767',
   lightBeige: '#FFF8F2',
   beige: '#FFEBD9',
-  yellow: '#FFB930'
+  yellow: '#FFB930',
+  black: '#000000',
+  grey: '#E6E6E6',
+  textGrey: '#6B6B6B',
+  green: '#34A853'
 }
 
 export const breakpoints = {
   desktop: '1024px',
   tablet: '768px'
+}
+
+export const boxShadow = {
+  default: '0px 6px 12px 4px rgba(0, 0, 0, 0.04);'
 }
 
 export const GlobalCss = createGlobalStyle`
@@ -22,8 +30,12 @@ export const GlobalCss = createGlobalStyle`
   }
 
   body {
-    background-color: ${colors.lightBeige};
-    color: ${colors.red};
+    background-color: ${colors.white};
+    color: ${colors.textGrey};
+
+    h1, h2, h3 {
+      color: ${colors.black};
+    }
   }
 
   .container {

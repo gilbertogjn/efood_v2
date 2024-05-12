@@ -1,18 +1,18 @@
 import { HeaderBar } from './styles'
 import bgHeader from '../../assets/image/bgHeader.svg'
+import { FaCartPlus } from 'react-icons/fa'
 
-import logo from '../../assets/image/logo.svg'
 import { Link } from 'react-router-dom'
 
 const Header = () => (
-  <HeaderBar style={{ backgroundImage: `url(${bgHeader})` }}>
+  <HeaderBar>
     <div className="container">
       <Link title="Voltar para home" to="/">
         <h1>
-          <img src={logo} />
+          e<span>food</span>
         </h1>
       </Link>
-      <h2>Viva experiências gastronômicas no conforto da sua casa</h2>
+      <FaCartPlus />
     </div>
   </HeaderBar>
 )

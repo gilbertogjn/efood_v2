@@ -1,11 +1,12 @@
 import styled from 'styled-components'
-import { breakpoints, colors } from '../../styles'
+import { boxShadow, breakpoints, colors } from '../../styles'
 
 export const Card = styled.div`
   position: relative;
   width: 472px;
   background-color: ${colors.white};
-  border: 1px solid ${colors.red};
+  box-shadow: ${boxShadow.default};
+  border-radius: 8px;
 
   .photo {
     width: 100%;
@@ -31,7 +32,7 @@ export const TagBar = styled.div`
 `
 
 export const Infos = styled.div`
-  padding: 8px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
 `

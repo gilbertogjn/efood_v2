@@ -4,13 +4,15 @@ import { Link } from 'react-router-dom'
 import { colors } from '../../styles'
 
 export const ButtonLink = styled(Link)`
-  height: 24px;
-  width: 94px;
-  color: ${colors.beige};
-  background-color: ${colors.red};
-  padding: 4px 6px;
+  height: auto;
+  width: 120px;
+  color: ${colors.white};
+  background-color: ${colors.black};
+  padding: 8px 12px;
   text-decoration: none;
+  text-align: center;
   font-weight: bold;
+  border-radius: 8px;
 `
 
 export const ButtonContainer = styled.button`

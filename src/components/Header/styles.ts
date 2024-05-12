@@ -1,14 +1,17 @@
 import styled from 'styled-components'
-import { breakpoints, colors } from '../../styles'
+import { boxShadow, breakpoints, colors } from '../../styles'
 
 export const HeaderBar = styled.section`
-  background-color: ${colors.beige};
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: ${boxShadow.default};
+  background-color: white;
 
   .container {
-    height: 384px;
-    padding: 40px 0;
+    height: 70px;
+    padding: 10px;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 
@@ -19,7 +22,12 @@ export const HeaderBar = styled.section`
   }
 
   h1 {
+    color: ${colors.black};
     line-height: 0;
+
+    span {
+      color: ${colors.green};
+    }
   }
 
   h2 {
