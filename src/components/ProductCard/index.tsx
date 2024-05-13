@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux'
 import { Card, Description, Modal } from './styles'
 
 import close from '../../assets/image/close.svg'
+import { IoCloseOutline } from 'react-icons/io5'
 
 import Button from '../Button'
 
@@ -42,12 +43,7 @@ const ProductCard = ({ dish }: Props) => {
         <div className="overlay" onClick={() => setModalOn(false)}></div>
         <div className="container">
           <img src={dish.foto} alt="Pizza de Marguerita" />
-          <img
-            className="close"
-            src={close}
-            alt="Botão fechar"
-            onClick={() => setModalOn(false)}
-          />
+          <IoCloseOutline className="close" onClick={() => setModalOn(false)} />
           <div className="infos">
             <h3>{dish.nome}</h3>
             <p>{dish.descricao}</p>

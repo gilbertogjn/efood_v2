@@ -1,14 +1,14 @@
 import styled from 'styled-components'
-import { breakpoints, colors } from '../../styles'
+import { boxShadow, breakpoints, colors } from '../../styles'
 import { ButtonContainer } from '../Button/styles'
 
 export const Card = styled.div`
   position: relative;
   width: 320px;
-  height: 338px;
-  background-color: ${colors.red};
-  color: ${colors.beige};
-  padding: 8px;
+  background-color: ${colors.white};
+  padding: 12px;
+  box-shadow: ${boxShadow.default};
+  border-radius: 8px;
 
   @media screen and (max-width: ${breakpoints.desktop}) {
     width: 100%;
@@ -22,6 +22,7 @@ export const Card = styled.div`
     width: 100%;
     height: 167px;
     object-fit: cover;
+    border-radius: 8px;
   }
 
   h3 {
@@ -73,8 +74,8 @@ export const Modal = styled.div`
     display: flex;
     gap: 24px;
     padding: 32px;
-    background-color: ${colors.red};
-    color: ${colors.beige};
+    background-color: ${colors.white};
+    border-radius: 8px;
 
     @media only screen and (max-width: ${breakpoints.tablet}) {
       display: block;
@@ -93,6 +94,7 @@ export const Modal = styled.div`
       width: 280px;
       height: 280px;
       object-fit: cover;
+      border-radius: 8px;
 
       @media only screen and (max-width: ${breakpoints.tablet}) {
         margin-bottom: 8px;
@@ -105,8 +107,8 @@ export const Modal = styled.div`
       position: absolute;
       right: 8px;
       top: 8px;
-      width: 16px;
-      height: 16px;
+      width: 18px;
+      height: 18px;
       cursor: pointer;
     }
   }

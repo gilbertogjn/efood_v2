@@ -18,7 +18,7 @@ export const breakpoints = {
 }
 
 export const boxShadow = {
-  default: '0px 6px 12px 4px rgba(0, 0, 0, 0.04);'
+  default: '0px 4px 8px 4px rgba(0, 0, 0, 0.05);'
 }
 
 export const GlobalCss = createGlobalStyle`
@@ -26,7 +26,7 @@ export const GlobalCss = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Roboto, sans-serif;
+    font-family: "Nunito", sans-serif;
   }
 
   body {
@@ -35,6 +35,7 @@ export const GlobalCss = createGlobalStyle`
 
     h1, h2, h3 {
       color: ${colors.black};
+      line-height: 1;
     }
   }
 

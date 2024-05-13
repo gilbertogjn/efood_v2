@@ -2,9 +2,9 @@ import styled from 'styled-components'
 import { breakpoints, colors } from '../../styles'
 
 export const HeaderBar = styled.section`
-  background-color: ${colors.beige};
-  font-weight: 900;
-  font-size: 18px;
+  background-color: ${colors.white};
+  font-weight: bold;
+  font-size: 16px;
 
   h1 {
     line-height: 0;
@@ -25,8 +25,16 @@ export const HeaderProductInfo = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: ${colors.red};
-  position: relative;
+  color: ${colors.black};
+  height: 70px;
+  position: sticky;
+  top: 0;
+
+  h1 {
+    span {
+      color: ${colors.green};
+    }
+  }
 
   @media only screen and (max-width: ${breakpoints.tablet}) {
     display: grid;
@@ -34,7 +42,7 @@ export const HeaderProductInfo = styled.div`
   }
 
   .restaurantsBtn {
-    color: ${colors.red};
+    color: ${colors.black};
     width: 197px;
 
     @media only screen and (max-width: ${breakpoints.tablet}) {
@@ -79,12 +87,12 @@ export const HeroBar = styled.div`
     justify-content: space-between;
     height: 100%;
     padding: 25px 8px;
-    color: ${colors.white};
 
     h2 {
       font-size: 36px;
-      font-weight: 900;
+      font-weight: bold;
       z-index: 1;
+      color: ${colors.white};
     }
 
     h3 {
@@ -92,6 +100,7 @@ export const HeroBar = styled.div`
       font-size: 32px;
       z-index: 1;
       text-transform: capitalize;
+      color: ${colors.white};
     }
   }
 `

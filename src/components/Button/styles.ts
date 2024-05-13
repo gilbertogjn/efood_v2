@@ -17,11 +17,12 @@ export const ButtonLink = styled(Link)`
 
 export const ButtonContainer = styled.button`
   width: 100%;
-  background-color: ${colors.beige};
-  color: ${colors.red};
+  background-color: ${colors.black};
+  color: ${colors.white};
   padding: 4px 0;
   text-decoration: none;
   font-weight: bold;
   border: none;
   cursor: pointer;
+  border-radius: 8px;
 `

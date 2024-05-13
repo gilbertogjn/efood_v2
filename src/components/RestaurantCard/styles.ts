@@ -7,6 +7,7 @@ export const Card = styled.div`
   background-color: ${colors.white};
   box-shadow: ${boxShadow.default};
   border-radius: 8px;
+  overflow: hidden;
 
   .photo {
     width: 100%;

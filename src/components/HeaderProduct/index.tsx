@@ -25,7 +25,7 @@ const HeaderProduct = () => {
   const { data: restaurant } = useGetRestaurantQuery(id!)
 
   return (
-    <HeaderBar style={{ backgroundImage: `url(${bgHeader})` }}>
+    <HeaderBar>
       <div className="container">
         <HeaderProductInfo>
           <Link
@@ -37,7 +37,7 @@ const HeaderProduct = () => {
           </Link>
           <Link title="Voltar para restaurantes" className="logoHome" to="/">
             <h1>
-              <img src={logo} />
+              e<span>food</span>
             </h1>
           </Link>
           <p onClick={openCart}>{items.length} produto(s) no carrinho</p>
