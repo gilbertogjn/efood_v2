@@ -28,9 +28,14 @@ export const CartContainer = styled.aside`
   right: 0;
   width: 360px;
   height: 100%;
-  background-color: ${colors.red};
-  color: ${colors.beige};
-  padding: 32px 8px;
+  background-color: ${colors.white};
+  color: ${colors.textGrey};
+  padding: 32px 12px;
+
+  .secondaryBtn {
+    background-color: ${colors.grey};
+    color: ${colors.black};
+  }
 
   @media only screen and (max-width: ${breakpoints.tablet}) {
     width: 85%;
@@ -54,16 +59,21 @@ export const CartContainer = styled.aside`
     li {
       display: flex;
       width: 100%;
-      background-color: ${colors.beige};
-      color: ${colors.red};
+      background-color: ${colors.grey};
       padding: 8px;
       position: relative;
+      border-radius: 8px;
+
+      p {
+        color: ${colors.green};
+      }
 
       .itemImg {
         width: 80px;
         height: 80px;
         object-fit: cover;
-        margin-right: 8px;
+        margin-right: 12px;
+        border-radius: 8px;
       }
 
       .removeItem {
@@ -80,7 +90,7 @@ export const CartContainer = styled.aside`
 export const Total = styled.div`
   display: flex;
   justify-content: space-between;
-  color: ${colors.beige};
+  color: ${colors.black};
   font-weight: bold;
   font-size: 14px;
   margin: 40px 0 16px;
@@ -113,9 +123,10 @@ export const InputGroup = styled.div`
   input {
     margin-top: 8px;
     width: 100%;
-    background-color: ${colors.beige};
+    background-color: ${colors.grey};
     border: none;
     padding: 8px;
     font-size: 14px;
+    border-radius: 8px;
   }
 `

@@ -7,9 +7,18 @@ type Props = {
   onClick?: () => void
   children: string
   disabled?: boolean
+  className?: string
 }
 
-const Button = ({ type, title, to, onClick, children, disabled }: Props) => {
+const Button = ({
+  type,
+  title,
+  to,
+  onClick,
+  children,
+  disabled,
+  className
+}: Props) => {
   if (type === 'button' || type === 'submit') {
     return (
       <ButtonContainer
@@ -17,6 +26,7 @@ const Button = ({ type, title, to, onClick, children, disabled }: Props) => {
         title={title}
         onClick={onClick}
         disabled={disabled}
+        className={className}
       >
         {children}
       </ButtonContainer>

@@ -13,7 +13,7 @@ import {
   Viewport
 } from './styles'
 
-import trashIcon from '../../assets/image/trash.svg'
+import { FaRegTrashAlt } from 'react-icons/fa'
 
 import Button from '../Button'
 
@@ -171,6 +171,7 @@ const Cart = () => {
                   title="Voltar para produtos"
                   type="button"
                   onClick={() => dispatch(close())}
+                  className="secondaryBtn"
                 >
                   Voltar para produtos
                 </Button>
@@ -189,10 +190,9 @@ const Cart = () => {
                         <h3>{item.nome}</h3>
                         <p>{formatPrices(item.preco)}</p>
                       </div>
-                      <img
+                      <FaRegTrashAlt
                         onClick={() => removeItem(item.id)}
                         className="removeItem"
-                        src={trashIcon}
                       />
                     </li>
                   ))}
@@ -351,6 +351,7 @@ const Cart = () => {
                           onClick={handlePrevious}
                           title="Clique aqui para voltar ao carrinho"
                           type="button"
+                          className="secondaryBtn"
                         >
                           Voltar para o carrinho
                         </Button>
@@ -462,6 +463,7 @@ const Cart = () => {
                           onClick={() => setAddressOn(true)}
                           title="Clique aqui para voltar a edição de endereço"
                           type="button"
+                          className="secondaryBtn"
                         >
                           Voltar para edição do endereço
                         </Button>

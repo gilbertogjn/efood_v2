@@ -70,6 +70,7 @@ export const Modal = styled.div`
   }
 
   .container {
+    width: 750px;
     position: relative;
     display: flex;
     gap: 24px;
