@@ -12,7 +12,9 @@ const Header = () => (
           e<span>food</span>
         </h1>
       </Link>
-      <FaCartPlus />
+      <span className="cartIcon">
+        <FaCartPlus />
+      </span>
     </div>
   </HeaderBar>
 )

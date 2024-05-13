@@ -35,7 +35,7 @@ export const Socials = styled.div`
   gap: 8px;
   margin: 32px 0 80px;
 
-  img {
-    width: 24px;
+  a {
+    color: ${colors.white};
   }
 `

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { boxShadow, breakpoints, colors } from '../../styles'
+import { FaCartPlus } from 'react-icons/fa'
 
 export const HeaderBar = styled.section`
   position: sticky;
@@ -14,6 +15,11 @@ export const HeaderBar = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .cartIcon {
+      color: ${colors.black};
+      cursor: pointer;
+    }
 
     @media only screen and (max-width: ${breakpoints.tablet}) {
       padding: 18px 8px;

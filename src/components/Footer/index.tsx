@@ -1,9 +1,10 @@
-import { Container, Socials } from './styles'
-import logo from '../../assets/image/logo.svg'
-import instagram from '../../assets/image/instagram.svg'
-import facebook from '../../assets/image/facebook.svg'
-import twitter from '../../assets/image/twitter.svg'
 import { Link } from 'react-router-dom'
+
+import { Container, Socials } from './styles'
+
+import { FaInstagram } from 'react-icons/fa'
+import { FaFacebook } from 'react-icons/fa'
+import { FaXTwitter } from 'react-icons/fa6'
 
 const Footer = () => (
   <Container>
@@ -14,13 +15,13 @@ const Footer = () => (
     </Link>
     <Socials>
       <a href="#">
-        <img src={instagram} />
+        <FaInstagram />
       </a>
       <a href="#">
-        <img src={facebook} />
+        <FaFacebook />
       </a>
       <a href="#">
-        <img src={twitter} />
+        <FaXTwitter />
       </a>
     </Socials>
     <p>
