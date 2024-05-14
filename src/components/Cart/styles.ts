@@ -21,7 +21,7 @@ export const Overlay = styled.div`
 `
 
 export const CartContainer = styled.aside`
-  z-index: 2;
+  z-index: 100;
   display: block;
   position: fixed;
   top: 0;

@@ -6,14 +6,10 @@ export const HeroContainer = styled.section`
   background-size: cover;
   display: flex;
   align-items: flex-end;
-  padding-bottom: 30px;
   position: relative;
-
-  h2 {
-    color: ${colors.white};
-    font-size: 34px;
-    max-width: 550px;
-  }
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
   &::after {
     position: absolute;
@@ -29,5 +25,26 @@ export const HeroContainer = styled.section`
 
   .container {
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 25px 8px;
+
+    h2 {
+      font-size: 36px;
+      font-weight: bold;
+      z-index: 1;
+      color: ${colors.white};
+      max-width: 550px;
+    }
+
+    h3 {
+      font-weight: 100;
+      font-size: 32px;
+      z-index: 1;
+      text-transform: capitalize;
+      color: ${colors.white};
+    }
   }
 `

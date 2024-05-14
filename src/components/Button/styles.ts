@@ -19,7 +19,7 @@ export const ButtonContainer = styled.button`
   width: 100%;
   background-color: ${colors.black};
   color: ${colors.white};
-  padding: 4px 0;
+  padding: 8px 0;
   text-decoration: none;
   font-weight: bold;
   border: none;

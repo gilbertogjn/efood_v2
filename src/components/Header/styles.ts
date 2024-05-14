@@ -1,48 +1,64 @@
 import styled from 'styled-components'
+
 import { boxShadow, breakpoints, colors } from '../../styles'
 
 export const HeaderBar = styled.section`
+  background-color: ${colors.white};
+  font-weight: bold;
+  font-size: 16px;
   position: sticky;
   top: 0;
-  z-index: 100;
+  width: 100%;
+  color: ${colors.black};
+  z-index: 1;
   box-shadow: ${boxShadow.default};
-  background-color: white;
+  padding: 0 8px;
 
   .container {
-    height: 70px;
-    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 80px;
+  }
 
-    .cartIcon {
-      color: ${colors.black};
-      cursor: pointer;
-    }
+  .arrow {
+    font-size: 12px;
+    margin-right: 8px;
+    color: ${colors.black};
+  }
 
-    @media only screen and (max-width: ${breakpoints.tablet}) {
-      padding: 18px 8px;
-      height: 250px;
+  .cartIcon {
+    color: ${colors.black};
+
+    svg {
+      margin-bottom: -2px;
     }
   }
 
   h1 {
-    color: ${colors.black};
-    line-height: 0;
-
     span {
       color: ${colors.green};
     }
   }
 
-  h2 {
-    font-size: 36px;
-    font-weight: 900;
-    max-width: 540px;
-    text-align: center;
+  .restaurantsBtn {
+    color: ${colors.black};
+  }
 
-    @media only screen and (max-width: ${breakpoints.tablet}) {
-      font-size: 30px;
+  p {
+    cursor: pointer;
+    text-align: right;
+  }
+
+  @media only screen and (max-width: ${breakpoints.tablet}) {
+    .container {
+      width: 100%;
+      height: 60px;
+      font-size: 14px;
+    }
+
+    .cartIconText {
+      display: none;
     }
   }
 `

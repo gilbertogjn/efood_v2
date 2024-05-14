@@ -1,9 +1,11 @@
-import HeaderProduct from '../../components/HeaderProduct'
+import Header from '../../components/Header'
+import Hero from '../../components/Hero'
 import ProductList from '../../components/ProductList'
 
 const Restaurant = () => (
   <>
-    <HeaderProduct />
+    <Header />
+    <Hero />
     <ProductList />
   </>
 )
