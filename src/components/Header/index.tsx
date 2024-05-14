@@ -1,5 +1,4 @@
 import { HeaderBar } from './styles'
-import bgHeader from '../../assets/image/bgHeader.svg'
 import { FaCartPlus } from 'react-icons/fa'
 
 import { Link } from 'react-router-dom'

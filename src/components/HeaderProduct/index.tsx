@@ -2,8 +2,7 @@ import { Link, useParams } from 'react-router-dom'
 
 import { HeaderBar, HeaderProductInfo, HeroBar } from './styles'
 
-import bgHeader from '../../assets/image/bgHeader.svg'
-import logo from '../../assets/image/logo.svg'
+import { FaCartPlus, FaArrowLeft } from 'react-icons/fa'
 
 import { open } from '../../store/reducers/cart'
 import { useDispatch, useSelector } from 'react-redux'
@@ -33,6 +32,7 @@ const HeaderProduct = () => {
             className="restaurantsBtn"
             to="/"
           >
+            <FaArrowLeft className="arrow" />
             Restaurantes
           </Link>
           <Link title="Voltar para restaurantes" className="logoHome" to="/">
@@ -40,7 +40,12 @@ const HeaderProduct = () => {
               e<span>food</span>
             </h1>
           </Link>
-          <p onClick={openCart}>{items.length} produto(s) no carrinho</p>
+          <p onClick={openCart}>
+            <span className="cartIcon">
+              <FaCartPlus />
+            </span>{' '}
+            {items.length} produto(s) no carrinho
+          </p>
         </HeaderProductInfo>
       </div>
       <HeroBar style={{ backgroundImage: `url(${restaurant?.capa})` }}>

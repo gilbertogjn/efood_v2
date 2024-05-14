@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { boxShadow, breakpoints, colors } from '../../styles'
-import { FaCartPlus } from 'react-icons/fa'
 
 export const HeaderBar = styled.section`
   position: sticky;

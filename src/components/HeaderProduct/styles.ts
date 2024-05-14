@@ -21,14 +21,28 @@ export const HeaderBar = styled.section`
 `
 
 export const HeaderProductInfo = styled.div`
+  position: sticky;
+  top: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: ${colors.black};
   height: 70px;
-  position: sticky;
-  top: 0;
+
+  .arrow {
+    font-size: 12px;
+    margin-right: 6px;
+    color: ${colors.black};
+  }
+
+  .cartIcon {
+    color: ${colors.black};
+
+    svg {
+      margin-bottom: -2px;
+    }
+  }
 
   h1 {
     span {

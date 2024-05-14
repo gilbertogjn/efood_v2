@@ -116,7 +116,7 @@ export const Modal = styled.div`
 
   ${ButtonContainer} {
     width: auto;
-    padding: 4px 7px;
+    padding: 6px 12px;
 
     @media only screen and (max-width: ${breakpoints.tablet}) {
       width: 100%;
