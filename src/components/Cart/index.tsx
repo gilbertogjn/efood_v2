@@ -173,7 +173,7 @@ const Cart = () => {
                   onClick={() => dispatch(close())}
                   className="secondaryBtn"
                 >
-                  Voltar para produtos
+                  Voltar
                 </Button>
               </>
             ) : (

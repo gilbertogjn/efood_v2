@@ -50,6 +50,10 @@ export const HeaderBar = styled.section`
     text-align: right;
   }
 
+  .cart-number {
+    display: none;
+  }
+
   @media only screen and (max-width: ${breakpoints.tablet}) {
     .container {
       width: 100%;
@@ -57,8 +61,13 @@ export const HeaderBar = styled.section`
       font-size: 14px;
     }
 
-    .cartIconText {
+    .cartIconText,
+    .link-text {
       display: none;
+    }
+
+    .cart-number {
+      display: inline;
     }
   }
 `

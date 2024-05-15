@@ -3,10 +3,8 @@ import { createGlobalStyle } from 'styled-components'
 export const colors = {
   white: '#FFFFFF',
   red: '#E66767',
-  lightBeige: '#FFF8F2',
-  beige: '#FFEBD9',
-  yellow: '#FFB930',
   black: '#000000',
+  hoverBlack: '#333333',
   grey: '#E6E6E6',
   textGrey: '#6B6B6B',
   green: '#34A853'

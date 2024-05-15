@@ -29,7 +29,7 @@ const Header = () => {
             to="/"
           >
             <FaArrowLeft className="arrow" />
-            Restaurantes
+            <span className="link-text">Restaurantes</span>
           </Link>
         )}
         <Link title="Voltar para restaurantes" className="logoHome" to="/">
@@ -40,6 +40,9 @@ const Header = () => {
         <p onClick={openCart}>
           <span className="cartIcon">
             <FaCartPlus />
+            <span className="cart-number">
+              {items.length > 0 && `(${items.length})`}
+            </span>
           </span>{' '}
           <span className="cartIconText">
             {items.length} produto(s) no carrinho

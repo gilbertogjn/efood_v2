@@ -25,4 +25,9 @@ export const ButtonContainer = styled.button`
   border: none;
   cursor: pointer;
   border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: ${colors.hoverBlack};
+  }
 `
