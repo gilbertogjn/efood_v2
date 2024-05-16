@@ -5,19 +5,19 @@ import RestaurantList from '../../components/RestaurantList'
 import { useGetRestaurantsQuery } from '../../services/api'
 
 const Home = () => {
-  const { data: restaurants, isLoading } = useGetRestaurantsQuery()
+  const { data: restaurants, isLoading: isLoadingRestaurants } =
+    useGetRestaurantsQuery()
 
-  if (restaurants) {
-    return (
-      <>
-        <Header />
-        <Hero />
-        <RestaurantList restaurants={restaurants} />
-      </>
-    )
-  }
-
-  return <h3>Carregando...</h3>
+  return (
+    <>
+      <Header />
+      <Hero />
+      <RestaurantList
+        restaurants={restaurants}
+        isLoading={isLoadingRestaurants}
+      />
+    </>
+  )
 }
 
 export default Home

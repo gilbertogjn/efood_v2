@@ -3,6 +3,7 @@ import ProductCard from '../ProductCard'
 import { Grid } from './styles'
 import { useParams } from 'react-router-dom'
 import { useGetRestaurantQuery } from '../../services/api'
+import Loader from '../Loader'
 
 const ProductList = () => {
   const { id } = useParams()
@@ -10,7 +11,7 @@ const ProductList = () => {
   const { data: restaurant } = useGetRestaurantQuery(id!)
 
   if (!restaurant) {
-    return <h3>Carregando...</h3>
+    return <Loader />
   }
 
   return (
