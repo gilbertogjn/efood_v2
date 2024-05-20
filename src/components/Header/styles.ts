@@ -10,7 +10,7 @@ export const HeaderBar = styled.section`
   top: 0;
   width: 100%;
   color: ${colors.black};
-  z-index: 1;
+  z-index: 5;
   box-shadow: ${boxShadow.default};
   padding: 0 8px;
 

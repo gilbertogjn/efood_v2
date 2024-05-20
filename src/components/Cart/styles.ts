@@ -1,12 +1,21 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { breakpoints, colors } from '../../styles'
 
-export const Viewport = styled.div`
-  z-index: 3;
-  display: none;
+const slideIn = keyframes`
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+`
 
-  &.is-open {
-    display: flex;
+const slideOut = keyframes`
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
   }
 `
 
@@ -17,7 +26,13 @@ export const Overlay = styled.div`
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1;
+  z-index: 6;
+  display: none;
+  transition: all 0.4s;
+
+  &.is-visible {
+    display: flex;
+  }
 `
 
 export const CartContainer = styled.aside`
@@ -25,12 +40,20 @@ export const CartContainer = styled.aside`
   display: block;
   position: fixed;
   top: 0;
-  right: 0;
+  right: 0px;
   width: 360px;
   height: 100%;
   background-color: ${colors.white};
   color: ${colors.textGrey};
   padding: 32px 12px;
+
+  &.slide-in {
+    animation: ${slideIn} 0.2s ease-in-out forwards;
+  }
+
+  &.slide-out {
+    animation: ${slideOut} 0.2s ease-in-out forwards;
+  }
 
   .secondaryBtn {
     background-color: ${colors.grey};

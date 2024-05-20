@@ -4,14 +4,7 @@ import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import InputMask from 'react-input-mask'
 
-import {
-  CartContainer,
-  InputGroup,
-  Overlay,
-  Row,
-  Total,
-  Viewport
-} from './styles'
+import { CartContainer, InputGroup, Overlay, Row, Total } from './styles'
 
 import { FaRegTrashAlt } from 'react-icons/fa'
 
@@ -479,10 +472,12 @@ const Cart = () => {
   }
 
   return (
-    <Viewport className={isOpen ? 'is-open' : ''}>
-      <Overlay onClick={closeCart} />
-      <CartContainer>{renderCurrentScreen()}</CartContainer>
-    </Viewport>
+    <>
+      <Overlay className={isOpen ? 'is-visible' : ''} onClick={closeCart} />
+      <CartContainer className={isOpen ? 'slide-in' : 'slide-out'}>
+        {renderCurrentScreen()}
+      </CartContainer>
+    </>
   )
 }
 
