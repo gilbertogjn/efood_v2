@@ -65,8 +65,13 @@ export const CartContainer = styled.aside`
   }
 
   h3,
+  h4,
   p {
     margin-bottom: 16px;
+  }
+
+  h4 {
+    color: ${colors.black};
   }
 
   .card-data-row {

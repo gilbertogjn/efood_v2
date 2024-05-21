@@ -97,7 +97,6 @@ const Cart = () => {
       dispatch(clear())
       setAddressOn(true)
     }
-    console.log(`Is success: ${isSuccess}`)
   }, [isSuccess, dispatch])
 
   const handleNext = () => {
@@ -157,6 +156,7 @@ const Cart = () => {
       case 1:
         return (
           <>
+            <h3>Seu carrinho</h3>
             {items.length === 0 ? (
               <>
                 <p>Seu carrinho esta vazio</p>
@@ -180,7 +180,7 @@ const Cart = () => {
                         alt={item.nome}
                       />
                       <div>
-                        <h3>{item.nome}</h3>
+                        <h4>{item.nome}</h4>
                         <p>{formatPrices(item.preco)}</p>
                       </div>
                       <FaRegTrashAlt
@@ -353,10 +353,11 @@ const Cart = () => {
                   </div>
                 ) : (
                   <div className="payment-screen">
-                    <h3>
-                      Pagamento - Valor a pagar R${' '}
-                      {formatPrices(getTotalPrice(items))}
-                    </h3>
+                    <h3>Pagamento</h3>
+                    <Total style={{ marginTop: '0' }}>
+                      <span>Valor a pagar</span>
+                      <span>{formatPrices(getTotalPrice(items))}</span>
+                    </Total>
                     <Row>
                       <InputGroup>
                         <label htmlFor="cardName">Nome no cartão</label>
